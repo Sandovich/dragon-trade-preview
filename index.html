@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Дракон Трейд — международная логистика, таможенное оформление, сертификация и доставка грузов из Китая под ключ.">
+<title>Дракон Трейд — международная логистика</title>
+<link rel="canonical" href="dragon-trade-final.html">
+<meta property="og:title" content="Дракон Трейд — международная логистика">
+<meta property="og:description" content="Доставляем грузы из Китая в Россию, оформляем документы, сертификацию и маркировку. Один подрядчик на весь процесс.">
+<meta property="og:image" content="assets/images/optimized/hero-bg.webp">
+<link href="assets/logo/dragon-logo-32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="assets/logo/dragon-logo-256.png" rel="icon" sizes="192x192" type="image/png">
+<link href="assets/logo/favicon.ico" rel="shortcut icon">
+<link href="assets/logo/dragon-logo-256.png" rel="apple-touch-icon">
+<style>
+:root{
+  --navy-deep:#050d18;
+  --navy:#07121f;
+  --navy-mid:#0c1c30;
+  --panel:rgba(13,27,45,.56);
+  --panel-border:rgba(255,255,255,.10);
+  --hairline:rgba(255,255,255,.12);
+  --ink:#ffffff;
+  --ink-soft:rgba(255,255,255,.72);
+  --ink-faint:rgba(255,255,255,.5);
+  --gold:#ddb66c;
+  --gold-soft:#d8bd83;
+  --gold-line:linear-gradient(180deg,#f1ddb0 0%,#d8bd83 32%,#b08a4d 68%,#8d6a37 100%);
+  --focus:#f1ddb0;
+  --radius:20px;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --container:min(1160px,92%);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{
+  margin:0;
+  background:var(--navy);
+  color:var(--ink-soft);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+.container{width:var(--container);margin:0 auto;}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+h1,h2,h3{font-family:var(--serif);color:var(--ink);margin:0;text-wrap:balance;text-shadow:0 2px 14px rgba(0,0,0,.55);}
+em{font-style:normal;}
+.gold-text{
+  background:var(--gold-line);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  text-shadow:0 1px 10px rgba(184,154,98,.18);
+}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px;}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(5,13,24,.72);
+  backdrop-filter:blur(14px) saturate(130%);-webkit-backdrop-filter:blur(14px) saturate(130%);
+  border-bottom:1px solid var(--hairline);
+}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.brand img{height:34px;width:auto;}
+.brand span{font-family:var(--serif);color:var(--ink);font-size:18px;letter-spacing:.01em;}
+.nav{display:flex;gap:26px;list-style:none;margin:0;padding:0;}
+.nav a{text-decoration:none;font-size:14px;font-weight:600;color:var(--ink-soft);position:relative;padding:6px 0;}
+.nav a:hover,.nav a:focus-visible{color:var(--ink);}
+.header-actions{display:flex;align-items:center;gap:18px;flex-shrink:0;}
+.header-phone{display:flex;flex-direction:column;line-height:1.25;text-align:right;}
+.header-phone a{font-weight:700;color:var(--ink);text-decoration:none;font-size:14px;}
+.header-phone span{font-size:11px;color:var(--ink-faint);}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;justify-content:center;
+  padding:11px 22px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;
+  cursor:pointer;border:1px solid transparent;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.btn-gold{background:linear-gradient(180deg,#f1ddb0,#d8bd83 55%,#b08a4d);color:#241a06;box-shadow:0 10px 26px rgba(184,154,98,.28);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(184,154,98,.38);}
+.btn-ghost{background:rgba(255,255,255,.05);border-color:var(--panel-border);color:var(--ink);}
+.btn-ghost:hover{background:rgba(255,255,255,.1);}
+.menu-toggle{
+  display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--panel-border);
+  background:rgba(255,255,255,.05);cursor:pointer;position:relative;flex-shrink:0;
+}
+.menu-toggle span{position:absolute;left:11px;right:11px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s ease,opacity .25s ease;}
+.menu-toggle span:nth-child(1){top:15px;}
+.menu-toggle span:nth-child(2){top:20px;}
+.menu-toggle span:nth-child(3){top:25px;}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg);}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg);}
+
+@media (max-width:900px){
+  .nav,.header-phone{display:none;}
+  .menu-toggle{display:block;}
+  .mobile-nav{
+    display:flex;flex-direction:column;gap:2px;
+    max-height:0;overflow:hidden;
+    background:rgba(5,13,24,.97);border-top:1px solid var(--hairline);
+    transition:max-height .3s ease;
+  }
+  .mobile-nav.is-open{max-height:420px;}
+  .mobile-nav a{padding:14px var(--mobile-side,20px);text-decoration:none;color:var(--ink-soft);font-weight:600;border-bottom:1px solid var(--hairline);}
+  .mobile-nav a:hover{color:var(--ink);}
+  .mobile-nav .mobile-nav__phone{padding:14px 20px;color:var(--gold-soft);font-weight:700;}
+}
+@media (min-width:901px){.mobile-nav{display:none;}}
+
+/* ---------- Sections shared ---------- */
+section{position:relative;padding:120px 0;overflow:hidden;}
+.section-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0;}
+.section-shade{position:absolute;inset:0;z-index:1;}
+.section-inner{position:relative;z-index:2;}
+/* every section sits on a photo — give body/secondary text a shadow so it stays legible over bright sky/water regardless of local contrast */
+.section-inner p,
+.eyebrow,
+.t-feature h3,.t-feature p,
+.route-point strong,.route-point span,
+.route-caption,
+.transport-stat strong,.transport-stat span,
+.benefit-item strong,.benefit-item p,
+.tt-row strong,.tt-row p,
+.w-card h3,.w-card p,
+.service-row__body p,
+.hero-proof strong,.hero-proof span,
+.hero-chip b,.hero-chip span{
+  text-shadow:0 1px 8px rgba(0,0,0,.6);
+}
+.eyebrow{
+  font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 16px;
+}
+.gold-rule{display:block;width:56px;height:2px;margin:22px 0 0;background:linear-gradient(90deg,var(--gold-soft),#8d6a37);}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.is-visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* ---------- Hero ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;padding-top:150px;padding-bottom:80px;}
+.hero .section-bg{background-image:url('assets/images/optimized/hero-bg.webp');animation:kenburns 26s ease-in-out infinite alternate;}
+@keyframes kenburns{from{transform:scale(1.04);}to{transform:scale(1.12);}}
+@media (prefers-reduced-motion:reduce){.hero .section-bg{animation:none;}}
+.hero .section-shade{background:linear-gradient(180deg,transparent 82%,rgba(5,12,22,1) 100%),linear-gradient(100deg,rgba(4,9,16,.86) 0%,rgba(5,12,22,.62) 42%,rgba(5,12,22,.22) 68%,rgba(5,12,22,.05) 100%);}
+.hero-content{max-width:640px;}
+.hero-title{font-size:clamp(34px,4.6vw,60px);line-height:1.12;font-weight:700;letter-spacing:-.02em;margin-bottom:22px;}
+.hero-description{font-size:17px;line-height:1.65;max-width:520px;margin:0 0 30px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:44px;}
+.hero-proof{display:flex;gap:34px;flex-wrap:wrap;}
+.hero-proof strong{display:block;font-family:var(--serif);font-size:26px;color:var(--ink);}
+.hero-proof span{font-size:12px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;}
+.hero-chips{
+  margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--panel-border);border:1px solid var(--panel-border);border-radius:18px;overflow:hidden;
+  backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);
+}
+.hero-chip{background:rgba(9,18,30,.62);padding:18px 16px;transition:background .25s ease,transform .25s ease;}
+.hero-chip:hover{background:rgba(13,27,45,.88);transform:translateY(-3px);}
+@media (prefers-reduced-motion:reduce){.hero-chip{transition:none;}.hero-chip:hover{transform:none;}}
+.hero-chip b{display:block;color:var(--gold-soft);font-family:var(--serif);font-size:15px;margin-bottom:4px;}
+.hero-chip span{font-size:12px;color:var(--ink-faint);line-height:1.3;}
+@media (max-width:760px){.hero-chips{grid-template-columns:repeat(2,1fr);}}
+
+/* ---------- Services ---------- */
+.services .section-bg{background-image:url('assets/images/optimized/services-bg.webp');}
+.services .section-shade{background:linear-gradient(180deg,rgba(5,12,22,1) 0%,rgba(5,12,22,.9) 10%,rgba(5,12,22,.86) 40%,rgba(5,12,22,.86) 60%,rgba(5,12,22,.9) 90%,rgba(5,12,22,1) 100%);}
+.section-heading{max-width:640px;margin:0 0 56px;}
+.section-heading h2{font-size:clamp(30px,3.6vw,46px);line-height:1.15;font-weight:700;}
+.services-list{border-top:1px solid var(--hairline);}
+.service-row{
+  display:grid;grid-template-columns:56px 1fr auto;gap:28px;align-items:center;
+  padding:28px 0;border-bottom:1px solid var(--hairline);
+  transition:padding-left .25s ease,border-color .25s ease;
+}
+.service-row:hover{padding-left:10px;border-color:rgba(224,182,93,.4);}
+.service-row__num{font-family:var(--serif);font-size:22px;color:var(--gold-soft);font-variant-numeric:tabular-nums;}
+.service-row__body h3{font-size:19px;line-height:1.3;margin:0 0 6px;}
+.service-row__body p{font-size:14.5px;line-height:1.6;color:var(--ink-soft);margin:0;max-width:560px;}
+.service-row__link{font-weight:800;font-size:14px;color:var(--gold-soft);text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;}
+.service-row__link span{transition:transform .2s ease;}
+.service-row:hover .service-row__link span{transform:translateX(4px);}
+@media (max-width:700px){
+  .service-row{grid-template-columns:32px 1fr;row-gap:12px;padding:22px 0;}
+  .service-row__link{grid-column:2;justify-self:start;}
+}
+
+.benefits-panel{
+  margin-top:50px;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;
+  background:var(--panel-border);border:1px solid var(--panel-border);border-radius:19px;overflow:hidden;
+  backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);
+}
+@media (max-width:900px){.benefits-panel{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:520px){.benefits-panel{grid-template-columns:1fr;}}
+.benefit-item{background:rgba(9,18,30,.6);padding:22px 20px;display:flex;gap:12px;transition:background .25s ease,transform .25s ease,box-shadow .25s ease;}
+.benefit-item:hover{background:rgba(13,27,45,.85);transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.35);}
+@media (prefers-reduced-motion:reduce){.benefit-item{transition:none;}.benefit-item:hover{transform:none;}}
+.benefit-item svg{width:22px;height:22px;flex-shrink:0;fill:none;stroke:var(--gold);stroke-width:1.8;}
+.benefit-item strong{display:block;color:var(--ink);font-size:14.5px;margin-bottom:4px;}
+.benefit-item p{margin:0;font-size:13px;color:var(--ink-faint);line-height:1.4;}
+
+/* ---------- Transport ---------- */
+.transport .section-bg{background-image:url('assets/images/optimized/transport-bg.webp');}
+.transport .section-shade{background:linear-gradient(180deg,rgba(5,12,22,1) 0%,rgba(5,12,22,.88) 10%,rgba(5,12,22,.72) 45%,rgba(5,12,22,.72) 60%,rgba(5,12,22,.88) 90%,rgba(5,12,22,1) 100%);}
+.transport-table{border-top:1px solid var(--hairline);margin-bottom:52px;}
+.tt-row{display:grid;grid-template-columns:190px 1fr 130px;gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid var(--hairline);}
+.tt-head{padding-bottom:14px;color:var(--gold-soft);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;}
+.tt-row strong{font-family:var(--serif);font-weight:400;color:var(--ink);font-size:18px;}
+.tt-row p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-soft);}
+.tt-time{text-align:right;font-weight:800;font-size:13.5px;color:var(--gold-soft);font-variant-numeric:tabular-nums;}
+@media (max-width:700px){
+  .tt-head{display:none;}
+  .tt-row{grid-template-columns:1fr;gap:4px;padding:18px 0;}
+  .tt-time{text-align:left;}
+}
+.transport-stats{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-top:46px;
+  background:var(--panel-border);border:1px solid var(--panel-border);border-radius:18px;overflow:hidden;
+}
+@media (max-width:760px){.transport-stats{grid-template-columns:repeat(2,1fr);}}
+.transport-stat{background:rgba(9,18,30,.6);padding:22px 18px;text-align:center;transition:background .25s ease,transform .25s ease;}
+.transport-stat:hover{background:rgba(13,27,45,.85);transform:translateY(-3px);}
+@media (prefers-reduced-motion:reduce){.transport-stat{transition:none;}.transport-stat:hover{transform:none;}}
+.transport-stat strong{display:block;font-family:var(--serif);font-size:26px;color:var(--ink);font-variant-numeric:tabular-nums;}
+.transport-stat span{font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;}
+
+/* ---------- Workflow ---------- */
+.workflow .section-bg{background-image:url('assets/images/optimized/workflow-bg.webp');}
+.workflow .section-shade{background:linear-gradient(180deg,rgba(5,12,22,1) 0%,rgba(5,12,22,.85) 10%,rgba(5,12,22,.55) 45%,rgba(5,12,22,.55) 60%,rgba(5,12,22,.85) 90%,rgba(5,12,22,1) 100%);}
+.workflow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+@media (max-width:1024px){.workflow-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.workflow-grid{grid-template-columns:1fr;}}
+.w-card{background:var(--panel);border:1px solid var(--panel-border);border-radius:18px;padding:22px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;}
+.w-card:hover{transform:translateY(-4px);border-color:rgba(224,182,93,.55);box-shadow:0 16px 34px rgba(0,0,0,.4);}
+@media (prefers-reduced-motion:reduce){.w-card{transition:none;}.w-card:hover{transform:none;}}
+.w-card__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.w-card__num{font-family:var(--serif);font-size:22px;color:var(--gold);}
+.w-card svg{width:26px;height:26px;fill:none;stroke:var(--gold);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.w-card h3{font-size:16px;margin-bottom:6px;}
+.w-card p{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.5;}
+
+/* ---------- Tracking ---------- */
+.tracking .section-bg{background-image:url('assets/images/optimized/transport-bg.webp');}
+.tracking .section-shade{background:linear-gradient(180deg,rgba(5,12,22,1) 0%,rgba(5,12,22,.9) 10%,rgba(5,12,22,.8) 45%,rgba(5,12,22,.8) 60%,rgba(5,12,22,.9) 90%,rgba(5,12,22,1) 100%);}
+.tracking-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;}
+@media (max-width:960px){.tracking-layout{grid-template-columns:1fr;}}
+.tracking-features{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px;}
+@media (max-width:560px){.tracking-features{grid-template-columns:1fr;}}
+.t-feature{display:flex;gap:14px;}
+.t-feature__icon{width:44px;height:44px;border-radius:12px;border:1px solid rgba(224,182,93,.5);display:grid;place-items:center;color:var(--gold);flex-shrink:0;}
+.t-feature h3{font-size:15px;margin-bottom:4px;}
+.t-feature p{font-size:13px;color:var(--ink-faint);margin:0;line-height:1.45;}
+.route{position:relative;display:flex;flex-direction:column;padding-left:30px;margin-top:6px;}
+.route::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--gold-soft),rgba(224,182,93,.12));}
+.route-point{position:relative;padding-bottom:36px;}
+.route-point:last-child{padding-bottom:0;}
+.route-point::before{
+  content:'';position:absolute;left:-30px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:var(--navy-deep);border:2px solid var(--gold-soft);
+}
+.route-point:last-child::before{background:var(--gold-soft);}
+.route-point strong{display:block;font-family:var(--serif);color:var(--ink);font-size:19px;margin-bottom:3px;}
+.route-point span{font-size:12.5px;color:var(--ink-faint);}
+.route-caption{font-size:12px;color:var(--ink-faint);margin:22px 0 0 30px;font-style:italic;}
+
+/* ---------- Contacts ---------- */
+.contacts .section-bg{background-image:url('assets/images/optimized/contacts-bg.webp');}
+.contacts .section-shade{background:linear-gradient(180deg,rgba(5,12,22,1) 0%,rgba(5,12,22,.88) 10%,rgba(5,12,22,.68) 40%,rgba(5,12,22,.68) 60%,rgba(5,12,22,.88) 90%,rgba(5,12,22,1) 100%);}
+.contacts-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+@media (max-width:960px){.contacts-layout{grid-template-columns:1fr;}}
+.contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:36px 0;}
+@media (max-width:520px){.contact-cards{grid-template-columns:1fr;}}
+.c-card{background:var(--panel);border:1px solid var(--panel-border);border-radius:16px;padding:20px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;}
+.c-card:hover{transform:translateY(-3px);border-color:rgba(224,182,93,.55);box-shadow:0 14px 30px rgba(0,0,0,.35);}
+@media (prefers-reduced-motion:reduce){.c-card{transition:none;}.c-card:hover{transform:none;}}
+.c-card svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.8;margin-bottom:10px;}
+.c-card h3{font-size:14px;margin-bottom:4px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;font-family:var(--sans);font-weight:700;}
+.c-card strong{display:block;font-size:16px;color:var(--ink);margin-bottom:2px;}
+.c-card p{margin:0;font-size:12.5px;color:var(--ink-faint);}
+.trust-row{display:flex;gap:28px;flex-wrap:wrap;margin-top:8px;}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-soft);}
+.trust-item svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2;}
+
+.form-panel{
+  background:var(--panel);border:1px solid var(--panel-border);border-radius:var(--radius);
+  padding:34px;backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px) saturate(130%);
+}
+.form-panel h3{font-size:22px;margin-bottom:6px;}
+.form-panel > p{margin:0 0 24px;font-size:14px;color:var(--ink-faint);}
+.form-errors{background:rgba(197,90,60,.14);border:1px solid rgba(229,90,60,.4);border-radius:12px;padding:14px 18px;margin-bottom:18px;}
+.form-errors:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
+.form-errors__title{margin:0 0 6px;font-weight:800;font-size:14px;color:#e5a26b;}
+.form-errors ul{margin:0;padding-left:18px;font-size:13px;line-height:1.6;}
+.form-errors a{color:#e5a26b;}
+.form-row{display:flex;gap:14px;margin-bottom:14px;}
+@media (max-width:480px){.form-row{flex-direction:column;}}
+.field-group{flex:1;display:flex;flex-direction:column;}
+.field{
+  flex:1;padding:13px 16px;border-radius:12px;border:1px solid var(--panel-border);
+  background:rgba(255,255,255,.04);color:var(--ink);font-family:inherit;font-size:14px;width:100%;
+}
+.field::placeholder{color:var(--ink-faint);}
+.field:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-color:var(--focus);}
+.field[aria-invalid="true"]{border-color:#e5a26b;}
+.field-error{margin:6px 0 0;font-size:12px;color:#e5a26b;min-height:1em;}
+textarea.field{min-height:96px;resize:vertical;margin-bottom:16px;}
+.consent{display:flex;align-items:flex-start;gap:10px;font-size:12.5px;color:var(--ink-faint);margin-bottom:6px;line-height:1.5;}
+.consent + .field-error{margin-bottom:20px;}
+.consent input{margin-top:3px;flex-shrink:0;}
+.form-footer{display:flex;flex-wrap:wrap;align-items:center;gap:16px;}
+.form-footer button{border:none;font-family:inherit;}
+.form-status{margin:14px 0 0;font-size:13.5px;line-height:1.5;min-height:1.3em;}
+
+footer{
+  border-top:1px solid var(--hairline);padding:36px 0;background:var(--navy-deep);
+}
+.footer-row{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;font-size:13px;color:var(--ink-faint);}
+.footer-row a{text-decoration:none;color:var(--ink-faint);}
+.footer-row a:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a class="brand" href="#home" aria-label="Дракон Трейд — на главную">
+      <picture><source srcset="assets/logo/dragon-logo.webp" type="image/webp"><img src="assets/logo/dragon-logo.png" alt="Дракон Трейд"></picture>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#transport">Доставка</a>
+      <a href="#workflow">Как работаем</a>
+      <a href="#tracking">Отслеживание</a>
+      <a href="about.html">О нас</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <div class="header-phone">
+        <a href="tel:+78005007768">+7 (800) 500-77-68</a>
+        <span>Ежедневно 9:00–20:00</span>
+      </div>
+      <a class="btn btn-gold" href="#contacts">Оставить заявку</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+    <a href="#services">Услуги</a>
+    <a href="#transport">Доставка</a>
+    <a href="#workflow">Как работаем</a>
+    <a href="#tracking">Отслеживание</a>
+    <a href="about.html">О нас</a>
+    <a href="#contacts">Контакты</a>
+    <a class="mobile-nav__phone" href="tel:+78005007768">+7 (800) 500-77-68</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="section-bg" aria-hidden="true"></div>
+  <div class="section-shade" aria-hidden="true"></div>
+  <div class="container section-inner">
+    <div class="hero-content reveal">
+      <h1 class="hero-title" id="hero-title">Международная логистика<br>и таможенное <span class="gold-text">оформление</span></h1>
+      <p class="hero-description">Доставляем грузы из Китая в Россию, оформляем документы, сертификацию и маркировку. Один подрядчик на весь процесс.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#contacts">Оставить заявку</a>
+        <a class="btn btn-ghost" href="tel:+78005007768">Позвонить нам</a>
+      </div>
+      <div class="hero-proof">
+        <div><strong class="counter">7+</strong><span>лет в логистике</span></div>
+        <div><strong class="counter">4</strong><span>способа доставки</span></div>
+        <div><strong class="counter">6</strong><span>складов в Китае</span></div>
+      </div>
+    </div>
+    <div class="hero-chips reveal">
+      <div class="hero-chip"><b>Логистика</b><span>Импорт под ключ с документами</span></div>
+      <div class="hero-chip"><b>Таможня</b><span>ДТ, пошлины и сопровождение</span></div>
+      <div class="hero-chip"><b>Сертификация</b><span>ДС, сертификаты и образцы</span></div>
+      <div class="hero-chip"><b>Честный знак</b><span>Коды и маркировка товаров</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="section-bg" aria-hidden="true"></div>
+  <div class="section-shade" aria-hidden="true"></div>
+  <div class="container section-inner">
+    <header class="section-heading reveal">
+      <p class="eyebrow">Полный комплекс решений</p>
+      <h2 id="services-title">Наши <span class="gold-text">услуги</span></h2>
+      <span class="gold-rule" aria-hidden="true"></span>
+    </header>
+    <div class="services-list reveal">
+      <article class="service-row">
+        <span class="service-row__num">01</span>
+        <div class="service-row__body">
+          <h3>Международная логистика</h3>
+          <p>Организуем доставку грузов из Китая и других стран любым видом транспорта под ключ.</p>
+        </div>
+        <a class="service-row__link" href="#contacts">Обсудить <span>→</span></a>
+      </article>
+      <article class="service-row">
+        <span class="service-row__num">02</span>
+        <div class="service-row__body">
+          <h3>Таможенное оформление</h3>
+          <p>Оформляем декларации, пошлины, документы и сопровождение грузов любой сложности.</p>
+        </div>
+        <a class="service-row__link" href="#contacts">Обсудить <span>→</span></a>
+      </article>
+      <article class="service-row">
+        <span class="service-row__num">03</span>
+        <div class="service-row__body">
+          <h3>Честный Знак</h3>
+          <p>Помогаем с регистрацией, кодами маркировки и полным сопровождением системы.</p>
+        </div>
+        <a class="service-row__link" href="#contacts">Обсудить <span>→</span></a>
+      </article>
+      <article class="service-row">
+        <span class="service-row__num">04</span>
+        <div class="service-row__body">
+          <h3>Сертификация</h3>
+          <p>Оформляем сертификаты, декларации соответствия и документы для законной реализации.</p>
+        </div>
+        <a class="service-row__link" href="#contacts">Обсудить <span>→</span></a>
+      </article>
+      <article class="service-row">
+        <span class="service-row__num">05</span>
+        <div class="service-row__body">
+          <h3>Складские услуги</h3>
+          <p>Консолидация, хранение, обработка и подготовка грузов на складах в Китае.</p>
+        </div>
+        <a class="service-row__link" href="#contacts">Обсудить <span>→</span></a>
+      </article>
+      <article class="service-row">
+        <span class="service-row__num">06</span>
+        <div class="service-row__body">
+          <h3>Консолидация и проверка</h3>
+          <p>Проверяем качество, пересчитываем, переупаковываем и объединяем поставки перед отправкой.</p>
+        </div>
+        <a class="service-row__link" href="#contacts">Обсудить <span>→</span></a>
+      </article>
+    </div>
+    <div class="benefits-panel reveal" aria-label="Преимущества работы с нами">
+      <div class="benefit-item"><svg viewBox="0 0 48 48"><path d="M24 5 39 11v11c0 10-6 17-15 21C15 39 9 32 9 22V11Z"/><path d="m17 24 5 5 10-12"/></svg><div><strong>Надёжно</strong><p>Работаем по договору, без серых схем</p></div></div>
+      <div class="benefit-item"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 14v11l8 5"/></svg><div><strong>Точно в срок</strong><p>Соблюдаем сроки доставки</p></div></div>
+      <div class="benefit-item"><svg viewBox="0 0 48 48"><path d="M14 34 34 14"/><circle cx="15" cy="15" r="5"/><circle cx="33" cy="33" r="5"/></svg><div><strong>Выгодно</strong><p>Считаем маршрут без переплат</p></div></div>
+      <div class="benefit-item"><svg viewBox="0 0 48 48"><path d="M9 27v-4a15 15 0 0 1 30 0v4"/><path d="M9 27h6v10H9zM33 27h6v10h-6zM33 39c-3 3-6 4-10 4"/></svg><div><strong>Поддержка 24/7</strong><p>Всегда на связи на всех этапах</p></div></div>
+      <div class="benefit-item"><svg viewBox="0 0 48 48"><path d="M24 5 39 11v11c0 10-6 17-15 21C15 39 9 32 9 22V11Z"/><path d="m17 24 5 5 10-12"/></svg><div><strong>Гарантия результата</strong><p>Несём ответственность за груз</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="transport" id="transport" aria-labelledby="transport-title">
+  <div class="section-bg" aria-hidden="true"></div>
+  <div class="section-shade" aria-hidden="true"></div>
+  <div class="container section-inner">
+    <header class="section-heading reveal">
+      <p class="eyebrow">4 способа довезти груз</p>
+      <h2 id="transport-title">Доставим ваш груз<br><span class="gold-text">любым видом транспорта</span></h2>
+      <p style="margin:18px 0 0;font-size:15px;max-width:560px;">Подбираем оптимальный маршрут и вид транспорта под ваш груз, сроки и бюджет — с индивидуальным подходом, страхованием и сопровождением на каждом этапе.</p>
+      <span class="gold-rule" aria-hidden="true"></span>
+    </header>
+    <div class="transport-table reveal" role="table" aria-label="Способы доставки">
+      <div class="tt-row tt-head" role="row">
+        <span role="columnheader">Способ</span>
+        <span role="columnheader">Особенности</span>
+        <span role="columnheader">Срок</span>
+      </div>
+      <div class="tt-row" role="row"><strong role="cell">Авиадоставка</strong><p role="cell">Быстрая доставка срочных и ценных грузов по всему миру.</p><span class="tt-time" role="cell">3–7 дней</span></div>
+      <div class="tt-row" role="row"><strong role="cell">Автодоставка</strong><p role="cell">Оптимальные маршруты по России, СНГ, Европе и Азии.</p><span class="tt-time" role="cell">5–15 дней</span></div>
+      <div class="tt-row" role="row"><strong role="cell">Ж/д доставка</strong><p role="cell">Надёжная перевозка крупных партий грузов на дальние расстояния.</p><span class="tt-time" role="cell">15–25 дней</span></div>
+      <div class="tt-row" role="row"><strong role="cell">Морская доставка</strong><p role="cell">Экономичное решение для крупногабаритных и тяжеловесных грузов.</p><span class="tt-time" role="cell">20–45 дней</span></div>
+    </div>
+    <div class="transport-stats reveal">
+      <div class="transport-stat"><strong class="counter">150+</strong><span>стран доставки</span></div>
+      <div class="transport-stat"><strong class="counter">5000+</strong><span>успешных доставок</span></div>
+      <div class="transport-stat"><strong class="counter">120+</strong><span>постоянных клиентов</span></div>
+      <div class="transport-stat"><strong class="counter">50+</strong><span>видов грузов</span></div>
+      <div class="transport-stat"><strong class="counter">99%</strong><span>доставок в срок</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow" id="workflow" aria-labelledby="workflow-title">
+  <div class="section-bg" aria-hidden="true"></div>
+  <div class="section-shade" aria-hidden="true"></div>
+  <div class="container section-inner">
+    <header class="section-heading reveal">
+      <p class="eyebrow">Как мы работаем</p>
+      <h2 id="workflow-title">Прозрачный процесс <span class="gold-text">от заявки до получения</span></h2>
+      <p style="margin:18px 0 0;font-size:15px;max-width:560px;">Берём на себя все этапы логистики и таможенного оформления. Вы всегда знаете, на каком этапе находится ваш груз.</p>
+      <span class="gold-rule" aria-hidden="true"></span>
+    </header>
+    <div class="workflow-grid reveal">
+      <article class="w-card"><div class="w-card__top"><span class="w-card__num">01</span><svg viewBox="0 0 60 60"><path d="M12 3h22l10 10v36H12z"/><path d="M34 3v12h12M20 27h16M20 35h12"/></svg></div><h3>Заявка</h3><p>Вы оставляете заявку и отправляете нам данные о товаре.</p></article>
+      <article class="w-card"><div class="w-card__top"><span class="w-card__num">02</span><svg viewBox="0 0 60 60"><rect height="46" rx="4" width="38" x="10" y="8"/><path d="M16 15h26v8H16z"/></svg></div><h3>Расчёт</h3><p>Рассчитываем стоимость и сроки доставки под ваш запрос.</p></article>
+      <article class="w-card"><div class="w-card__top"><span class="w-card__num">03</span><svg viewBox="0 0 60 60"><path d="M7 12h6l5 28h27l5-20H20"/><circle cx="24" cy="48" r="3"/><circle cx="44" cy="48" r="3"/></svg></div><h3>Выкуп товара</h3><p>Выкупаем товар у поставщика и переводим оплату без доп. комиссий.</p></article>
+      <article class="w-card"><div class="w-card__top"><span class="w-card__num">04</span><svg viewBox="0 0 60 60"><circle cx="25" cy="25" r="15"/><path d="m36 36 14 14M18 25h14M25 18v14"/></svg></div><h3>Проверка</h3><p>Проверяем товар на брак, соответствие и количество на складе.</p></article>
+      <article class="w-card"><div class="w-card__top"><span class="w-card__num">05</span><svg viewBox="0 0 60 60"><path d="m14 25 12-7 12 7-12 7zM14 25v14l12 7 12-7V25M26 32v14"/></svg></div><h3>Консолидация</h3><p>Объединяем ваш груз с другими заказами для оптимизации затрат.</p></article>
+      <article class="w-card"><div class="w-card__top"><span class="w-card__num">06</span><svg viewBox="0 0 60 60"><path d="M10 8h25l9 9v35H10z"/><path d="M35 8v11h11M18 28h14M18 36h10"/></svg></div><h3>Таможня</h3><p>Проходим таможенное оформление и получаем все документы.</p></article>
+      <article class="w-card"><div class="w-card__top"><span class="w-card__num">07</span><svg viewBox="0 0 60 60"><path d="M7 36h30V20H12zM37 28h9l7 8v10H37z"/><circle cx="18" cy="47" r="4"/><circle cx="44" cy="47" r="4"/></svg></div><h3>Доставка</h3><p>Доставляем груз выбранным видом транспорта в ваш город или на склад.</p></article>
+      <article class="w-card"><div class="w-card__top"><span class="w-card__num">08</span><svg viewBox="0 0 60 60"><path d="m11 22 15-9 15 9-15 9zM11 22v18l15 9 15-9V22M26 31v18"/><circle cx="45" cy="43" r="10"/><path d="m41 43 3 3 6-7"/></svg></div><h3>Получение</h3><p>Вы получаете груз и подтверждаете выполнение заказа.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="tracking" id="tracking" aria-labelledby="tracking-title">
+  <div class="section-bg" aria-hidden="true"></div>
+  <div class="section-shade" aria-hidden="true"></div>
+  <div class="container section-inner">
+    <div class="tracking-layout">
+      <div class="reveal">
+        <p class="eyebrow">Отслеживание груза</p>
+        <h2 id="tracking-title" style="font-size:clamp(28px,3.4vw,42px);line-height:1.18;">Ваш груз под нашим<br><span class="gold-text">постоянным контролем</span></h2>
+        <p style="margin:18px 0 0;font-size:15px;max-width:480px;">Мы сопровождаем груз на всём пути и информируем вас о каждом этапе. Вы всегда знаете, где находится ваша поставка и когда она прибудет.</p>
+        <div class="tracking-features">
+          <div class="t-feature"><span class="t-feature__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></span><div><h3>Фиксируем каждый этап</h3><p>Контролируем все ключевые точки маршрута.</p></div></div>
+          <div class="t-feature"><span class="t-feature__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 21 7v10l-9 5-9-5V7z"/></svg></span><div><h3>Безопасная доставка</h3><p>Выбираем проверенных перевозчиков.</p></div></div>
+          <div class="t-feature"><span class="t-feature__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><div><h3>Прозрачные сроки</h3><p>Сообщаем время прибытия заранее.</p></div></div>
+          <div class="t-feature"><span class="t-feature__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/></svg></span><div><h3>Всегда на связи</h3><p>Персональный менеджер отвечает на вопросы.</p></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="route" aria-label="Пример маршрута доставки">
+          <div class="route-point"><strong>Маньчжурия</strong><span>Отправка груза</span></div>
+          <div class="route-point"><strong>Москва</strong><span>Транзитный этап</span></div>
+          <div class="route-point"><strong>Казань</strong><span>Прибытие</span></div>
+        </div>
+        <p class="route-caption">Пример реального маршрута — ваш будет свой, под задачу.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts" aria-labelledby="contacts-title">
+  <div class="section-bg" aria-hidden="true"></div>
+  <div class="section-shade" aria-hidden="true"></div>
+  <div class="container section-inner">
+    <div class="contacts-layout">
+      <div class="reveal">
+        <p class="eyebrow">Свяжитесь с нами</p>
+        <h2 id="contacts-title" style="font-size:clamp(28px,3.4vw,42px);line-height:1.18;">Доставим ваш груз<br><span class="gold-text">точно в срок</span></h2>
+        <p style="margin:18px 0 0;font-size:15px;max-width:480px;">Оставьте заявку, и наш менеджер свяжется с вами, чтобы рассчитать стоимость и подобрать маршрут.</p>
+        <div class="contact-cards">
+          <div class="c-card"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1z"/></svg><h3>Телефон</h3><strong>+7 (800) 500-77-68</strong><p>Ежедневно 9:00–20:00</p></div>
+          <div class="c-card"><svg viewBox="0 0 24 24"><path d="M3 8l9 6 9-6M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg><h3>E-mail</h3><strong>info@dragon-trade.ru</strong><p>Отвечаем в течение рабочего дня</p></div>
+          <div class="c-card"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><h3>Режим работы</h3><strong>9:00 – 20:00</strong><p>Без выходных</p></div>
+          <div class="c-card"><svg viewBox="0 0 24 24"><path d="M3 12h18M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.5-4-9s1.5-6.5 4-9z"/></svg><h3>География</h3><strong>Китай → Россия</strong><p>6 складов в Китае, доставка по РФ</p></div>
+        </div>
+        <div class="trust-row">
+          <span class="trust-item"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Работаем официально, по договору</span>
+          <span class="trust-item"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>7+ лет на рынке логистики из Китая</span>
+        </div>
+      </div>
+
+      <form class="form-panel reveal" id="leadForm" novalidate>
+        <h3>Оставьте заявку</h3>
+        <p>Заполните форму — мы свяжемся с вами в течение рабочего дня.</p>
+        <div class="form-errors" id="formErrors" role="alert" tabindex="-1" hidden>
+          <p class="form-errors__title" id="formErrorsTitle">Проверьте поля формы</p>
+          <ul id="formErrorsList"></ul>
+        </div>
+        <div class="form-row">
+          <div class="field-group">
+            <input class="field" type="text" name="name" id="field-name" placeholder="Ваше имя" autocomplete="name" required aria-describedby="name-error">
+            <p class="field-error" id="name-error" aria-live="polite"></p>
+          </div>
+          <div class="field-group">
+            <input class="field" type="tel" name="phone" id="field-phone" placeholder="Телефон" autocomplete="tel" required aria-describedby="phone-error">
+            <p class="field-error" id="phone-error" aria-live="polite"></p>
+          </div>
+        </div>
+        <textarea class="field" name="details" placeholder="Опишите груз и маршрут (необязательно)"></textarea>
+        <label class="consent"><input type="checkbox" name="consent" id="field-consent" required aria-describedby="consent-error">Согласен(-на) на обработку персональных данных в соответствии с политикой конфиденциальности.</label>
+        <p class="field-error" id="consent-error" aria-live="polite"></p>
+        <div class="form-footer">
+          <button class="btn btn-gold" type="submit">Отправить заявку <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span>© 2026 Дракон Трейд. Международная логистика из Китая.</span>
+    <span><a href="tel:+78005007768">+7 (800) 500-77-68</a> · <a href="mailto:info@dragon-trade.ru">info@dragon-trade.ru</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // Mobile menu
+  var toggle = document.getElementById('menuToggle');
+  var mobileNav = document.getElementById('mobileNav');
+  function closeMenu(){ toggle.setAttribute('aria-expanded','false'); mobileNav.classList.remove('is-open'); }
+  toggle.addEventListener('click', function(){
+    var open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    mobileNav.classList.toggle('is-open', !open);
+  });
+  mobileNav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+  document.addEventListener('click', function(e){
+    if (!mobileNav.classList.contains('is-open')) return;
+    if (!mobileNav.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) closeMenu();
+  });
+
+  // Scroll reveal + stat counters
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals = document.querySelectorAll('.reveal');
+
+  function animateCounters(root){
+    var counters = root.querySelectorAll('.counter');
+    counters.forEach(function(el){
+      if (el.dataset.counted) return;
+      el.dataset.counted = '1';
+      var match = el.textContent.trim().match(/^(\d+)(.*)$/);
+      if (!match) return;
+      var target = parseInt(match[1], 10);
+      var suffix = match[2];
+      if (reduceMotion) { el.textContent = target + suffix; return; }
+      var duration = 1200;
+      var start = null;
+      function step(ts){
+        if (start === null) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    reveals.forEach(function(el){ el.classList.add('is-visible'); animateCounters(el); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          animateCounters(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  // Contact form
+  var form = document.getElementById('leadForm');
+  var status = document.getElementById('formStatus');
+  var errorsBox = document.getElementById('formErrors');
+  var errorsList = document.getElementById('formErrorsList');
+  var sending = false;
+
+  var validators = {
+    name: function(input){ return input.value.trim() ? '' : 'Введите ваше имя.'; },
+    phone: function(input){ return input.value.trim() ? '' : 'Введите номер телефона.'; },
+    consent: function(input){ return input.checked ? '' : 'Нужно согласие на обработку данных.'; }
+  };
+
+  function fieldErrorEl(name){ return document.getElementById(name + '-error'); }
+
+  function validateField(input){
+    var validator = validators[input.name];
+    if (!validator) return '';
+    var message = validator(input);
+    var errorEl = fieldErrorEl(input.name);
+    if (errorEl) errorEl.textContent = message;
+    input.setAttribute('aria-invalid', message ? 'true' : 'false');
+    return message;
+  }
+
+  function clearFieldError(input){
+    var errorEl = fieldErrorEl(input.name);
+    if (errorEl) errorEl.textContent = '';
+    input.removeAttribute('aria-invalid');
+  }
+
+  ['name', 'phone'].forEach(function(name){
+    form.elements[name].addEventListener('blur', function(){ validateField(form.elements[name]); });
+  });
+  form.elements.consent.addEventListener('change', function(){ validateField(form.elements.consent); });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (sending) return;
+
+    var checkOrder = [form.elements.name, form.elements.phone, form.elements.consent];
+    var errors = [];
+    checkOrder.forEach(function(input){
+      var message = validateField(input);
+      if (message) errors.push({ input: input, message: message });
+    });
+
+    if (errors.length) {
+      errorsList.innerHTML = '';
+      errors.forEach(function(err){
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '#' + err.input.id;
+        a.textContent = err.message;
+        a.addEventListener('click', function(evt){ evt.preventDefault(); err.input.focus(); });
+        li.appendChild(a);
+        errorsList.appendChild(li);
+      });
+      errorsBox.hidden = false;
+      errorsBox.focus();
+      return;
+    }
+    errorsBox.hidden = true;
+
+    var data = {
+      name: form.name.value.trim(),
+      phone: form.phone.value.trim(),
+      details: form.details.value.trim()
+    };
+    var button = form.querySelector('button[type="submit"]');
+    sending = true;
+    button.disabled = true;
+    var originalLabel = button.innerHTML;
+    button.innerHTML = 'Отправляем…';
+    status.textContent = 'Отправляем заявку…';
+    status.style.color = 'var(--ink-faint)';
+
+    fetch('/api/send-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function(response){
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      return response.json().catch(function(){ return {}; });
+    }).then(function(payload){
+      if (payload.ok === false) throw new Error(payload.error || 'Ошибка сервера');
+      form.reset();
+      checkOrder.forEach(clearFieldError);
+      status.textContent = 'Заявка отправлена. Мы свяжемся с вами в ближайшее время.';
+      status.style.color = 'var(--gold-soft)';
+    }).catch(function(){
+      status.textContent = 'Заявка пока не может быть отправлена онлайн — позвоните нам напрямую: +7 (800) 500-77-68.';
+      status.style.color = '#e5a26b';
+    }).finally(function(){
+      sending = false;
+      button.disabled = false;
+      button.innerHTML = originalLabel;
+    });
+  });
+})();
+</script>
+</body>
+</html>
